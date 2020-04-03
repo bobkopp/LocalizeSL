@@ -165,6 +165,19 @@ for ccc = 1:length(corefiles)
     fprintf(fid, '\t%0.3g', effcurve{ccc}(subyr, :));
     fprintf(fid, '\n');
 
+    doyr = 2070;
+    subyr = find(targyears{ccc} == doyr);
+    fprintf(fid, [legstr{ccc} ' - %0.0f'], doyr);
+    fprintf(fid, '\t%0.3g', effcurve{ccc}(subyr, :));
+    fprintf(fid, '\n');
+
+
+    doyr = 2080;
+    subyr = find(targyears{ccc} == doyr);
+    fprintf(fid, [legstr{ccc} ' - %0.0f'], doyr);
+    fprintf(fid, '\t%0.3g', effcurve{ccc}(subyr, :));
+    fprintf(fid, '\n');
+
     doyr = 2100;
     subyr = find(targyears{ccc} == doyr);
     fprintf(fid, [legstr{ccc} ' - %0.0f'], doyr);

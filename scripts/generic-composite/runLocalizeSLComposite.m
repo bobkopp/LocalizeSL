@@ -1,4 +1,4 @@
-% 2019-11-26 15:23:00 -0500
+% 2020-04-03 10:35:07 -0400
 
 rootdir='~/Dropbox/Code/LocalizeSL'; % change to directory containing LocalizeSL
 corefiles={'SLRProjections170113GRIDDEDcore','SLRProjections180124GRIDDEDcore_Tscens.mat','SLRProjections190726core_SEJ_full.mat','SLRProjections190726core_SEJ_full.mat'}; % specify corefiles to use
@@ -446,6 +446,6 @@ for sssss=1:length(selectedSites)
     %%%%%%%%
 
     if sssss==1
-        runLocalizeESL
+        runLocalizeSLCompositeESL
     end
 end
