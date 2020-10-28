@@ -1,6 +1,5 @@
 % Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2019-09-03 21:31:40 +0200
 
-
 %%% CONFIGURATION
 
 addpath ~/Dropbox/Code/LocalizeSL
@@ -29,7 +28,7 @@ targregions=p.targregions;
 
 
 addpath(pwd)
-workdir='workdir-200917';
+workdir='workdir-201028';
 if ~exist(workdir,'dir')
     mkdir(workdir)
 end

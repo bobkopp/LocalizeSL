@@ -1,7 +1,7 @@
 % Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2020-10-28 09:46:13 -0400
 
-scenimport=ImportScenarioOutput('../workdir-200917/LocalScenarios-NoBkgd.tsv');
-scenimport2=ImportScenarioOutput('../workdir-200917-Low/LocalScenarios-NoBkgd.tsv');
+scenimport=ImportScenarioOutput('../workdir-201028/LocalScenarios-NoBkgd.tsv');
+scenimport2=ImportScenarioOutput('../workdir-201028-Low/LocalScenarios-NoBkgd.tsv');
 bkgd=ImportBkgdRateOutput('bkgdrate.tsv');
 scenmerge=scenimport;
 targyears=scenmerge.yrs;
