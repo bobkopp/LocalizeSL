@@ -5,7 +5,7 @@ The scripts in this directory are updated from
 	United States. Technical Report NOS CO-OPS 083. National Oceanic and
 	Atmospheric Administration.
 
-In particular, we introduce two innovations:
+In particular, we introduce three innovations:
 
 1. Rather than filtering a base set of gridded projections based on Kopp et al,. 2014, assumptions, we also filter a set of projections that incorporates Bamber et al. (2019) ice sheets, with the cross-temporal correlation estimated based on DeConto and Pollard (2016). This means we have a larger set of initial scenarios from which to derive targeted scenarios, and the temporal evolution is more realistic. High-end end-of-century outcomes, most likely associated with late-century acceleration in ice sheet losses, no longer imply unrealistic mid-century sea levels. 
 
