@@ -1,4 +1,4 @@
-function WriteTableSLRRateExceedanceTiming(sampslocrise,rates,siteids,sitenames,targyears,scens,difftimestep,oneway,fileprefix) 
+function [out,rateyr]=WriteTableSLRRateExceedanceTiming(sampslocrise,rates,siteids,sitenames,targyears,scens,difftimestep,oneway,fileprefix) 
 
 % WriteTableSLRRateExceedanceTiming(sampslocrise,rates,siteids,sitenames,targyears,scens,difftimestep,oneway,[fileprefix])
 %
@@ -9,7 +9,7 @@ function WriteTableSLRRateExceedanceTiming(sampslocrise,rates,siteids,sitenames,
 % If oneway is set to 1, then any samples with sea-level falls
 % will be treated as though they stayed at their maximum value.
 %
-% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, Thu Apr 06 11:41:11 EDT 2017
+% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2020-08-24 11:52:20 -0400
 
 defval('fileprefix','LSLrates_exceedance_');
 defval('rates',10:10:500);
@@ -48,8 +48,9 @@ for jjj=1:length(siteids)
             u=sum(u,1)/Nsamps;
             fprintf(fid,'\t%0.3f',u);
             fprintf(fid,'\n');
+            out(ttt,:,kkk,jjj)=u;      
         end
-        fprintf(fid,'\n\n');        
+        fprintf(fid,'\n\n');  
     end
     fclose(fid);
 end

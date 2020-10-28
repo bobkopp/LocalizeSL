@@ -48,7 +48,7 @@ for qqq=1:size(proj,1)
     fprintf(fid,'\t%0.2f',[NaN NaN]);
     fprintf(fid,'\t%0.1f - MED',condtargs(1,qqq)/1000);
     fprintf(fid,'\t0');
-    fprintf(fid,'\t%0.0f',proj(qqq,:)/10);
+    fprintf(fid,'\t%0.1f',proj(qqq,:)/10);
     fprintf(fid,'\n');
     
     fprintf(fid,'GSL');
@@ -56,7 +56,7 @@ for qqq=1:size(proj,1)
     fprintf(fid,'\t%0.2f',[NaN NaN]);
     fprintf(fid,'\t%0.1f - LOW',condtargs(1,qqq)/1000);
     fprintf(fid,'\t0');
-    fprintf(fid,'\t%0.0f',projlo(qqq,:)/10);
+    fprintf(fid,'\t%0.1f',projlo(qqq,:)/10);
     fprintf(fid,'\n');
     
     fprintf(fid,'GSL');
@@ -64,7 +64,7 @@ for qqq=1:size(proj,1)
     fprintf(fid,'\t%0.2f',[NaN NaN]);
     fprintf(fid,'\t%0.1f - HIGH',condtargs(1,qqq)/1000);
     fprintf(fid,'\t0');
-    fprintf(fid,'\t%0.0f',projhi(qqq,:)/10);
+    fprintf(fid,'\t%0.1f',projhi(qqq,:)/10);
     fprintf(fid,'\n');
     
 
@@ -80,7 +80,7 @@ for www=1:length(p.targregions)
         fprintf(fid,'\t%0.2f',p.targsitecoords(www,:));
         fprintf(fid,'\t%0.1f - MED',condtargs(1,qqq)/1000);
         fprintf(fid,'\t0');
-        fprintf(fid,'\t%0.0f',projLOC(qqq,:,www)/10);
+        fprintf(fid,'\t%0.1f',projLOC(qqq,:,www)/10);
         fprintf(fid,'\n');
         
         fprintf(fid,p.targregionnames{www});
@@ -88,7 +88,7 @@ for www=1:length(p.targregions)
         fprintf(fid,'\t%0.2f',p.targsitecoords(www,:));
         fprintf(fid,'\t%0.1f - LOW',condtargs(1,qqq)/1000);
         fprintf(fid,'\t0');
-        fprintf(fid,'\t%0.0f',projLOClo(qqq,:,www)/10);
+        fprintf(fid,'\t%0.1f',projLOClo(qqq,:,www)/10);
         fprintf(fid,'\n');
         
         fprintf(fid,p.targregionnames{www});
@@ -96,7 +96,7 @@ for www=1:length(p.targregions)
         fprintf(fid,'\t%0.2f',p.targsitecoords(www,:));
         fprintf(fid,'\t%0.1f - HIGH',condtargs(1,qqq)/1000);
         fprintf(fid,'\t0');
-        fprintf(fid,'\t%0.0f',projLOChi(qqq,:,www)/10);
+        fprintf(fid,'\t%0.1f',projLOChi(qqq,:,www)/10);
         fprintf(fid,'\n');
         
 
