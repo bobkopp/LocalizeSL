@@ -1,4 +1,6 @@
-% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2020-10-28 09:46:13 -0400
+% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2020-10-28 16:08:08 -0400
+
+signature='Robert Kopp';
 
 scenimport=ImportScenarioOutput('../workdir-201028/LocalScenarios-NoBkgd.tsv');
 scenimport2=ImportScenarioOutput('../workdir-201028-Low/LocalScenarios-NoBkgd.tsv');
@@ -58,7 +60,7 @@ for sss=1:2
 
     fprintf(fid,['Local scenarios (cm) - ' longlabel '\n']);
     today=date;
-    fprintf(fid,['Produced by Robert Kopp on ' today '\n\n']);
+    fprintf(fid,['Produced by ' signature ' on ' today '\n\n']);
     fprintf(fid,'Site\tID\tLatitude\tLongitude\tScenario\tBackground');
     fprintf(fid,'\t%0.0f',targyears);
     fprintf(fid,'\n');
