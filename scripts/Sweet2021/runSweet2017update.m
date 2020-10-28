@@ -1,9 +1,8 @@
 % Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2020-10-28 09:38:17 -0400
 
-addpath(fullfile(pwd,'scripts'));
-
 rootdir='~/Dropbox/Code/LocalizeSL';
 addpath(fullfile(rootdir,'MFILES'));
+addpath(fullfile(rootdir,'scripts/Sweet2021'));
 
 runComposeCorefile;
 
@@ -19,7 +18,7 @@ runSeaLevelConditionalDistributionUncorrelatedLow
 cd ..
 
 addpath(pwd)
-workdir='workdir-200917';
+workdir='workdir-201028';
 if ~exist(workdir,'dir')
     mkdir(workdir)
 end

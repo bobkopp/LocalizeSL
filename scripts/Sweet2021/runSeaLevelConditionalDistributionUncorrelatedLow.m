@@ -1,11 +1,11 @@
-% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, Mon Jan 09 12:25:45 EST 2017
+% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2020-10-28 11:47:02 -0400
 
 % This script is identical to runSeaLevelConditionalDistributions, except that it
 % turns off the correlation between thermal expansion and ocean dynamics.
 % It's used in Sweet et al. 2017 for the Low scenario.
 
 addpath(pwd)
-workdir='workdir-200917-Low';
+workdir='workdir-201028-Low';
 if ~exist(workdir,'dir')
     mkdir(workdir)
 end
