@@ -37,7 +37,7 @@ function [projections,condsubscen,pooledGSL,pooledGSLcont,pooledGSLrate]=Conditi
 %
 % Developed for Sweet et al. (2017).
 %
-% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2020-01-30 17:08:08 -0500
+% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2020-11-02 20:30:01 -0500
 
 defval('condtargyrs',[2100 2050 2030]);
 defval('condtargs',[30 50 100 150 200 250 ;
@@ -74,7 +74,8 @@ end
 
 %%%%%
 
-colsCONT={colsGSL.colGIC,colsGSL.colTE,colsGSL.colGIS,colsGSL.colAIS,colsGSL.colLS}; colsCONTlab={'GIC','TE','GIS','AIS','LS'};
+colsCONT={colsGSL.colGIC,colsGSL.colTE,colsGSL.colGIS,colsGSL.colAIS,colsGSL.colLS,colsGSL.colAIS(1),colsGSL.colAIS(2),union(colsGSL.colAIS,colsGSL.colGIS)};
+colsCONTlab={'GIC','TE','GIS','AIS','LS','WAIS','EAIS','TotalIS'};
 projections.colsCONT=colsCONT; projections.colsCONTlab=colsCONTlab;
 
 clear condsubscen;

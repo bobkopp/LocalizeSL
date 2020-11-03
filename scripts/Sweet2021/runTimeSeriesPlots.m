@@ -1,6 +1,6 @@
-% 2020-09-02 10:10:38 -0400
+% 2020-11-02 19:58:31 -0500
 
-datdir='workdir-200917';
+datdir='workdir-201028';
 scenimport=ImportScenarioOutput(fullfile(datdir,'LocalScenarios-Climatic.tsv'));
 sub=find(scenimport.psmslid==0);
 NCA4.t=[2000	2010	2020	2030	2040	2050	2060	2070	2080	2090	2100	2120	2150	2200];
@@ -61,10 +61,8 @@ projsi=interp1(yrs,projs',t2)';
 %     diffyr2(sss)=sub(1);
 % end
 
-diffs=projsi(subH(1:5),:)-projsi(subL(2:6),:);
-diffs2=projsi(subH(1:4),:)-projsi(subL(3:6),:);
-diffs3=projsi(subH(1:5),:)-projsi(subL(6),:);
-clear diffyr;
+
+diffyr=zeros(1,5); diffyr2=zeros(1,4); diffyr3=zeros(1,3);
 for sss=1:size(diffs,1)
     sub=find(diffs(sss,:)<0);
     diffyr(sss)=sub(1);
@@ -121,3 +119,86 @@ samps=mvnrnd(x,s,1000);
 samps2=A2*samps';
 samps2=bsxfun(@minus,samps2,samps2(1,:));
 %
+
+
+%%% component time series
+
+
+datdir='workdir-201028';
+scenimport=ImportScenarioOutput(fullfile(datdir,'GSLScenariosComponents.tsv'));
+
+comps=unique(scenimport.comp);
+
+for zzz=1:length(comps)
+
+    docomp=comps{zzz};
+
+    sub=find(strcmpi(docomp,scenimport.comp));
+    yrs=scenimport.yrs;
+    projs=scenimport.projs(sub,:);
+    lev=scenimport.lev(sub);
+
+    subM=find(strcmp(lev,'MED'));
+    subH=union(find(strcmp(lev,'HIGH')),find(strcmp(lev,'HI')));
+    subL=find(strcmp(lev,'LOW'));
+    colrs='cmkgbr';
+
+    t2 = 2000:2100;
+    projsi=interp1(yrs,projs',t2)';
+
+    diffs=projsi(subH(1:5),:)-projsi(subL(2:6),:);
+    diffs2=projsi(subH(1:4),:)-projsi(subL(3:6),:);
+    diffs3=projsi(subH(1:3),:)-projsi(subL(4:6),:);
+    
+    diffyr=zeros(1,5); diffyr2=zeros(1,4); diffyr3=zeros(1,3);
+    for sss=1:size(diffs,1)
+        sub=find(diffs(sss,:)<0);
+        if length(sub)>0
+            diffyr(sss)=sub(1);
+        end
+    end
+    for sss=1:size(diffs2,1)
+        sub=find(diffs2(sss,:)<0);
+        if length(sub)>0
+            diffyr2(sss)=sub(1);
+        end
+    end
+    for sss=1:size(diffs3,1)
+        sub=find(diffs3(sss,:)<0);
+        if length(sub)>0
+            diffyr3(sss)=sub(1);
+        end
+    end
+
+    clf;
+    subplot(2,1,1);
+    hold on;
+
+    xlim([2020 2100]);
+    %ylim([0 250]);
+
+    if sum(diffyr3==0)==0
+        for sss=1:length(diffyr3)
+            hp=plot(t2(diffyr3(sss))*[1 1],projsi([subL(sss) subH(sss)],diffyr3(sss)),[colrs(sss) '-'],'linew',8);
+            set(hp,'Color',(get(hp,'Color')+[1 1 1])/2);
+            hp=plot(t2(diffyr3(sss))*[1 1],projsi([subL(sss+3) subH(sss+3)],diffyr3(sss)),[colrs(sss+3) '-'],'linew',8);
+            set(hp,'Color',(get(hp,'Color')+[1 1 1])/2);
+        end
+    end
+    
+    subt=find(t2==2100);
+    for sss=1:length(subL)
+        hp=plot((2100-(7-sss)/2)*[1 1],projsi([subL(sss) subH(sss)],subt),[colrs(sss) '-'],'linew',8);
+        set(hp,'Color',(get(hp,'Color')+[1 1 1])/2);
+    end
+
+    for sss=1:length(subM)
+        hp=plot(yrs,projs(subM(sss),:),[colrs(sss) '-'],'linew',1);
+    end
+    hold on;
+    plot([2000 2300],[0 0],'k-','linewidth',.5);
+
+    title(docomp)
+    ylabel('cm sle above 2000')
+    pdfwrite(['NCA4-revised-' docomp '-gates'])
+end

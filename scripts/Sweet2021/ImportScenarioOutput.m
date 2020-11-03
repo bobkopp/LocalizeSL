@@ -1,5 +1,5 @@
 function y=ImportScenarioOutput(datfile)
-% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, Wed Jan 11 14:33:44 EST 2017
+% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2020-11-02 19:57:08 -0500
  
 
 dat=importdata(datfile);
@@ -15,4 +15,7 @@ for www=1:size(textdat,1)
     s=strfind(scenpair{www},' - ');
     y.scen(www)=str2num(scenpair{www}(1:(s-1)));
     y.lev{www}=scenpair{www}((s+3):end);
+    if size(textdat,2)==6
+        y.comp{www}=textdat{www,6};
+    end
 end

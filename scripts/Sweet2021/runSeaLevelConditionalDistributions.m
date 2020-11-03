@@ -1,11 +1,6 @@
-% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2020-10-28 11:47:05 -0400
+% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2020-11-02 20:34:08 -0500
 
 addpath(pwd)
-workdir='workdir-201028';
-if ~exist(workdir,'dir')
-    mkdir(workdir)
-end
-cd(workdir);
 
 disp('Conditionalizing GSL...');
 [projGSL,condsubscen]=ConditionalDistributionsGSL(pcomp,condtargyrs,condtargs,condtargwins);
