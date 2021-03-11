@@ -1,4 +1,4 @@
-% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, Mon Jan 09 12:25:45 EST 2017
+% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2021-03-11 00:24:01 -0500
 
 % This script is identical to runSeaLevelConditionalDistributions, except that it
 % turns off the correlation between thermal expansion and ocean dynamics.
@@ -35,7 +35,7 @@ disp('Conditionalizing GSL...');
 % only do condsubscen(1)
 
 disp('Conditionalizing LSL...');
-projLOC=ConditionalDistributionsLSL(p,condsubscen);
+projLOC=ConditionalDistributionsLSL(pcomp,condsubscen,[],[],1);
 
 % now output
 

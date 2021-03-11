@@ -14,7 +14,7 @@ disp('Conditionalizing GSL...');
 % only do condsubscen(1)
 
 disp('Conditionalizing LSL...');
-projLOC=ConditionalDistributionsLSL(p,condsubscen);
+projLOC=ConditionalDistributionsLSL(p,condsubscen,[],[],1);
 
 % now output
 

@@ -1,5 +1,4 @@
-% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, Tue Nov 01 19:05:24 EDT 2016
-
+% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2021-03-11 00:24:05 -0500
 addpath(pwd)
 workdir='workdir-161101';
 if ~exist(workdir,'dir')
@@ -26,7 +25,7 @@ disp('Conditionalizing GSL...');
 [projGSL,condsubscen]=ConditionalDistributionsGSL(p,condtargyrs,condtargs,condtargwins);
 
 disp('Conditionalizing LSL...');
-projLOC=ConditionalDistributionsLSL(p,condsubscen);
+projLOC=ConditionalDistributionsLSL(pcomp,condsubscen,[],[],1);
 
 % now output
 

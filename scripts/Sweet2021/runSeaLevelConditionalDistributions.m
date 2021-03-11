@@ -6,7 +6,7 @@ disp('Conditionalizing GSL...');
 [projGSL,condsubscen]=ConditionalDistributionsGSL(pcomp,condtargyrs,condtargs,condtargwins);
 
 disp('Conditionalizing LSL...');
-projLOC=ConditionalDistributionsLSL(pcomp,condsubscen);
+projLOC=ConditionalDistributionsLSL(pcomp,condsubscen,[],[],1);
 
 % now output
 
