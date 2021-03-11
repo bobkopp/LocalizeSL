@@ -1,6 +1,6 @@
-% 2020-11-02 19:58:31 -0500
+% 2021-03-11 00:31:14 -0500
 
-datdir='workdir-201028';
+datdir='workdir-210311';
 scenimport=ImportScenarioOutput(fullfile(datdir,'LocalScenarios-Climatic.tsv'));
 sub=find(scenimport.psmslid==0);
 NCA4.t=[2000	2010	2020	2030	2040	2050	2060	2070	2080	2090	2100	2120	2150	2200];

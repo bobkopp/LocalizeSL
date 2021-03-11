@@ -1,9 +1,9 @@
-% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2020-10-28 16:08:08 -0400
+% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2021-03-11 00:29:44 -05000400
 
 signature='Robert Kopp';
 
-scenimport=ImportScenarioOutput('../workdir-201028/LocalScenarios-NoBkgd.tsv');
-scenimport2=ImportScenarioOutput('../workdir-201028-Low/LocalScenarios-NoBkgd.tsv');
+scenimport=ImportScenarioOutput('../workdir-210311/LocalScenarios-NoBkgd.tsv');
+scenimport2=ImportScenarioOutput('../workdir-210311-Low/LocalScenarios-NoBkgd.tsv');
 bkgd=ImportBkgdRateOutput('bkgdrate.tsv');
 scenmerge=scenimport;
 targyears=scenmerge.yrs;
