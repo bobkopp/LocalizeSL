@@ -1,4 +1,4 @@
-% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2019-09-03 21:31:40 +0200
+% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2021-03-15 15:39:29 -0400
 
 %%% CONFIGURATION
 
@@ -36,4 +36,6 @@ cd(workdir);
 
 % GIA (slow)
     [rateprojs,rateprojssd,rateprojs0,~,rateGIAproj,~,~,~,finescale]=CalculateBackgroundRates([],targsitecoords,[],[],PARAMDIR,IFILESworking,[],[],psmsldir,gslfile);
+ 
+ addpath ~/Dropbox/Code/LocalizeSL/scripts/Sweet2021
     runPlotBackgroundRates
