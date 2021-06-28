@@ -18,7 +18,7 @@ function ConditionalDistributionsPlotSeaLevelComponents(p,condtargs,projLOC,proj
 % colsCOMPlab: labels for compribution breakdown
 %
 % Developed for Sweet et al. (2017).
-% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, Mon Jan 09 13:46:51 EST 2017
+% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2020-11-02 20:04:36 -0500
 %
 
 defval('filesuffix','');
@@ -92,7 +92,7 @@ for www=1:length(p.targregions)
             fprintf(fid,p.targregionnames{www});
             fprintf(fid,'\t%0.0f',p.targregions(www));
             fprintf(fid,'\t%0.2f',p.targsitecoords(www,:));
-            fprintf(fid,'\t%0.1f - HI',condtargs(1,qqq)/1000);
+            fprintf(fid,'\t%0.1f - HIGH',condtargs(1,qqq)/1000);
             fprintf(fid,['\t' colsCOMPlab{ttt}]);
             fprintf(fid,'\t0');
             fprintf(fid,'\t%0.1f',projLOCcomphi(qqq,:,ttt,www)/10);

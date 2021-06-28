@@ -19,7 +19,7 @@ function ConditionalDistributionsPlotGSLComponents(p,condtargs,proj,projhi,projl
 % colsCONTlab: labels for contribution breakdown
 %
 % Developed for Sweet et al. (2017).
-% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, Sat Oct 01 10:05:17 EDT 2016
+% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2020-11-02 20:04:46 -0500
 %
 
 defval('filesuffix','');
@@ -88,7 +88,7 @@ for qqq=1:size(projCONT,1)
         fprintf(fid,'GSL');
         fprintf(fid,'\t%0.0f',NaN);
         fprintf(fid,'\t%0.2f',[NaN NaN]);
-        fprintf(fid,'\t%0.1f - HI',condtargs(1,qqq)/1000);
+        fprintf(fid,'\t%0.1f - HIGH',condtargs(1,qqq)/1000);
         fprintf(fid,['\t' colsCONTlab{ttt}]);
         fprintf(fid,'\t0');
         fprintf(fid,'\t%0.1f',projCONThi(qqq,:,ttt)/10);

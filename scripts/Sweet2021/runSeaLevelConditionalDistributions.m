@@ -1,28 +1,9 @@
-% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2021-03-11 00:24:05 -0500
+% Last updated by Robert Kopp, robert-dot-kopp-at-rutgers-dot-edu, 2021-03-11 00:30:24 -0500
+
 addpath(pwd)
-workdir='workdir-161101';
-if ~exist(workdir,'dir')
-    mkdir(workdir)
-end
-cd(workdir);
-
-rootdir='~/Dropbox/Code/LocalizeSL';
-addpath(fullfile(rootdir,'MFILES'));
-
-savefilecore=fullfile(rootdir,'IFILES/SLRProjections161027GRIDDEDcore.mat');
-p=load(savefilecore);
-
-condtargyrs=[2100 2050 2030];
-condtargs=[30 50 100 150 200 250 ;
-           15 NaN NaN NaN NaN NaN ;
-           9 NaN NaN NaN NaN NaN] * 10;
-condtargwins=[20 20 20 50 50 150 ;
-              20 20 20 20 20 20 ;
-              10 10 10 10 10 10];
-
 
 disp('Conditionalizing GSL...');
-[projGSL,condsubscen]=ConditionalDistributionsGSL(p,condtargyrs,condtargs,condtargwins);
+[projGSL,condsubscen]=ConditionalDistributionsGSL(pcomp,condtargyrs,condtargs,condtargwins);
 
 disp('Conditionalizing LSL...');
 projLOC=ConditionalDistributionsLSL(pcomp,condsubscen,[],[],1);
@@ -53,4 +34,4 @@ filesuffix='';
 
 ConditionalDistributionsPlotGSLComponents(p,condtargs,projGSL.proj,projGSL.projhi,projGSL.projlo,projGSL.projCONT,projGSL.projCONThi,projGSL.projCONTlo,projGSL.colsCONT,projGSL.colsCONTlab);
    
-ConditionalDistributionsPlotSeaLevelComponents(p,condtargs,projLOC.projLOC,projLOC.projLOChi,projLOC.projLOClo,projLOC.projLOCcomp,projLOC.projLOCcomphi,projLOC.projLOCcomplo,projLOC.colsCOMP,projLOC.colsCOMPlab,filesuffix,[],cmap);
+ConditionalDistributionsPlotSeaLevelComponents(p,condtargs,projLOC.projLOC,projLOC.projLOChi,projLOC.projLOClo,projLOC.projLOCcomp,projLOC.projLOCcomphi,projLOC.projLOCcomplo,projLOC.colsCOMP,projLOC.colsCOMPlab,filesuffix,cmap);
