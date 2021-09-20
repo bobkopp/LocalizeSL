@@ -4,7 +4,7 @@
 
 Unless otherwise noted, core files and other input files for LocalizeSL are licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](http://creativecommons.org/licenses/by-nc-sa/4.0).
 
-* **SLRProjections200204GRIDDEDcore_SROCC.mat**: Core file for gridded K14 projections used in Kopp et al. (2017), 13 January 2017, updated 28 June 2021 for consistency with IPCC SROCC Antarctic projections. (Copyright (C) 2021 Robert E. Kopp. Provided under CC BY-NC-SA 4.0.)
+* **SLRProjections210628GRIDDEDcore_SROCC.mat**: Core file for gridded K14 projections used in Kopp et al. (2017), 13 January 2017, updated 28 June 2021 for consistency with IPCC SROCC Antarctic projections. (Copyright (C) 2021 Robert E. Kopp. Provided under CC BY-NC-SA 4.0.)
 
 * **SLRProjections200204GRIDDEDcore_D20.mat**: Core file for gridded K14 projections used in Kopp et al. (2017), 13 January 2017, updated 4 February 2020 using Antarctic projections of DeConto et al. (2021). (Copyright (C) 2020 Robert E. Kopp. Provided under CC BY-NC-SA 4.0.)
 
