@@ -1,4 +1,4 @@
-**As of 2022, the ProjectSL/LocalizeSL is no longer in development. The primary Rutgers Earth System Science & Policy Lab platform for sea-level rise projections is now the Framework for Assessing Changes To Sea-level (FACTS).**
+**As of 2022, the ProjectSL/LocalizeSL framework is no longer in development. The primary Rutgers Earth System Science & Policy Lab platform for sea-level rise projections is now the Framework for Assessing Changes To Sea-level (FACTS).**
 
 For most users, the IPCC AR6 sea level projections, developed using FACTS, are the most suitable global source of local sea-level projections. Datasets can be downloaded [from Zenodo](https://zenodo.org/communities/ipcc-ar6-sea-level-projections). The primary AR6 sea level projection data set is available at [doi:10.5281/zenodo.5914710](https://doi.org/10.5281/zenodo.5914710).
 
