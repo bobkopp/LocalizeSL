@@ -10,7 +10,9 @@ Due to their size, the core data files are no longer stored in the code base. Th
 
 ```
 wget https://zenodo.org/records/6029807/files/LocalizeSL-3.2.zip?download=1
-unzip  LocalizeSL-3.2.zip -d IFILES LocalizeSL/IFILES/\*.mat
+unzip  LocalizeSL-3.2.zip -d tmp LocalizeSL/IFILES/\*.mat
+mv tmp/LocalizeSL/IFILES/*.mat IFILES
+rm -fr tmp
 ```
 
 
