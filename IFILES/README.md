@@ -2,6 +2,17 @@
 
 ![by-nc-sa](https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png)
 
+Due to their size, the core files are not stored in the code base.
+
+As of June 2021, the data for stable FACTS modules are available on Zenodo at https://doi.org/10.5281/zenodo.6029806.
+
+These can be downloaded using wget:
+
+```
+wget https://zenodo.org/records/6029807/files/LocalizeSL-3.2.zip?download=1
+unzip  LocalizeSL-3.2.zip -d . LocalizeSL/IFILES/\*.mat
+```
+
 Unless otherwise noted, core files and other input files for LocalizeSL are licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)](http://creativecommons.org/licenses/by-nc-sa/4.0).
 
 * **SLRProjections210628GRIDDEDcore_SROCC.mat**: Core file for gridded K14 projections used in Kopp et al. (2017), 13 January 2017, updated 28 June 2021 for consistency with IPCC SROCC Antarctic projections. (Copyright (C) 2021 Robert E. Kopp. Provided under CC BY-NC-SA 4.0.)

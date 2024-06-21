@@ -6,6 +6,14 @@ The [NASA/IPCC Sea Level Projection Viewer](https://sealevel.nasa.gov/ipcc-ar6-s
 
 The archived version of LocalizeSL is available at [doi:10.5281/zenodo.6029806](https://doi.org/10.5281/zenodo.6029806).
 
+Due to their size, the core data files are no longer stored in the code base. These can be extracted from the archived version using `wget` and `unzip`:
+
+```
+wget https://zenodo.org/records/6029807/files/LocalizeSL-3.2.zip?download=1
+unzip  LocalizeSL-3.2.zip -d IFILES LocalizeSL/IFILES/\*.mat
+```
+
+
 ---
 
 
